@@ -1,0 +1,12 @@
+Package: OrientExpress
+Title: Interact with OrientDB through R
+Version: 0.0.1
+Authors@R: person("Jared", "Lander", email = "packages@jaredlander.com", role = c("aut", "cre"))
+Description: Provides an R interface to the OrientDB API.
+Depends: R (>= 3.2.1)
+License: BSD_3_clause + file LICENSE
+LazyData: true
+ByteCompile: true
+URL: https://github.com/jaredlander/OrientExpress
+BugReports: https://github.com/jaredlander/OrientExpress/issues
+Suggests: testthat
