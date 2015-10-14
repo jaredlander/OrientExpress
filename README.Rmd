@@ -1,0 +1,26 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# OrientExpress
+
+This package is designed to interact, both read and write, with [OrientDB](http://orientdb.com/orientdb/).
+
+# Installation
+
+```{r installation,eval=FALSE}
+devtools::install_github('jaredlander/orientexpress')
+```
+
