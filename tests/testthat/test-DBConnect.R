@@ -12,12 +12,23 @@ test_that('A proper DB object is created', {
     expect_equal(length(dbLine), 5)
 })
 
-test_that('Slots are set', {
+test_that('is.OrientDB returns proper result', {
+    expect_is(is.OrientDB(dbLine), 'logical')
+    expect_true(is.OrientDB(dbLine))
+    expect_false(is.OrientDB(3))
+})
+
+test_that('Slots in dbInfo are set', {
     expect_match(dbLine$host, host)
     expect_match(dbLine$database, database)
     expect_match(dbLine$username, username)
     expect_match(dbLine$password, password)
     expect_match(dbLine$port, port)
+})
+
+test_that('buildDBUrlGeneric and buildURL error out if not provided a proper DB file', {
+    expect_error(buildDBUrlGeneric(3))
+    expect_error(buildDBURL(3))
 })
 
 test_that('The DB URL Generic is built properly', {

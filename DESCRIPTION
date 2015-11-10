@@ -10,4 +10,5 @@ ByteCompile: true
 URL: https://github.com/jaredlander/OrientExpress
 BugReports: https://github.com/jaredlander/OrientExpress/issues
 Suggests: testthat
-Imports: httr
+Imports: httr,
+    assertthat
