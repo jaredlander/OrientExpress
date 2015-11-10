@@ -9,7 +9,8 @@
 #' @param limit The limit for the number of records; defualt is -1 for all records
 #' @return A URL for the OrientDB REST API
 #' @examples 
-#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480')
 #' buildQuery(db, 'SELECT * FROM V')
 #' 
 buildQuery <- function(db, query, limit=-1)
@@ -22,8 +23,8 @@ buildQuery <- function(db, query, limit=-1)
 }
 
 #' @title query
-#' @description 
-#' @details 
+#' @description Query an OrientDB database
+#' @details Runs the supplied query againast the database
 #' @author Jared P. Lander
 #' @export query
 #' @rdname query
@@ -33,7 +34,8 @@ buildQuery <- function(db, query, limit=-1)
 #' @return A response object holding the results
 #' @examples 
 #' \dontrun{
-#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480')
 #' query(db, 'SELECT * FROM V')
 #' }
 #' 
@@ -42,7 +44,7 @@ query <- function(db, query, limit=-1)
     # make sure it's a database object
     assertthat::assert_that(is.OrientDB(db))
     
-    GET(buildQuery(db, query, limit))
+    httr::GET(buildQuery(db, query, limit))
 }
 
 #' @title format.logical
