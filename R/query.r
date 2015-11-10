@@ -39,6 +39,7 @@ buildQuery <- function(db, query, limit=-1)
 #' 
 query <- function(db, query, limit=-1)
 {
+    # make sure it's a database object
     assertthat::assert_that(is.OrientDB(db))
     
     GET(buildQuery(db, query, limit))
