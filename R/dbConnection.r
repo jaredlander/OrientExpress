@@ -11,7 +11,9 @@
 #' @param port Port number for connecting over http
 #' @return An object of class \code{OrientDB} to be used as a connection string
 #' @examples 
-#' dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+#' dbInfo(host='127.0.0.1', 
+#'      database='GratefulDeadConcerts', 
+#'      username='admin', password='admin', port='2480')
 #' 
 dbInfo <- function(host='localhost', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
 {
@@ -30,7 +32,8 @@ dbInfo <- function(host='localhost', database='GratefulDeadConcerts', username='
 #' @param x An object to be tested
 #' @return A logical indicating if the object is an OrientDB object
 #' @examples 
-#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480')
 #' is.OrientDB(db)
 #' 
 is.OrientDB <- function(x)
@@ -49,8 +52,10 @@ is.OrientDB <- function(x)
 #' @param \dots Further arguments
 #' @return Prints the connection string
 #' @examples 
-#' dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
-#' print(dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480'))
+#' dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'          username='admin', password='admin', port='2480')
+#' print(dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480'))
 #' 
 print.OrientDB <- function(x, ...)
 {
@@ -67,8 +72,9 @@ print.OrientDB <- function(x, ...)
 #' @param db An \code{OrientDB} object
 #' @return A string with a place holder for the query type
 #' @examples 
-#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
-#' buildDBUrlGeneric(db)
+#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480')
+#' orientexpress:::buildDBUrlGeneric(db)
 #' 
 buildDBUrlGeneric <- function(db)
 {
@@ -83,12 +89,14 @@ buildDBUrlGeneric <- function(db)
 #' @description Builds URL for OrientDB API
 #' @details Builds URL for OrientDB API
 #' @author Jared P. Lander
+#' @export buildDBURL
 #' @rdname buildDBURL
 #' @param db An \code{OrientDB} object
 #' @param type Type of command to execute
 #' @return A full URL for the OrientDB curl API
 #' @examples 
-#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+#' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
+#'              username='admin', password='admin', port='2480')
 #' buildDBURL(db)
 #' buildDBURL(db, 'sql')
 #' 

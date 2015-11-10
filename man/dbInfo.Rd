@@ -28,7 +28,9 @@ Builds connection information for a database
 Essentially builds the URL for a GET call
 }
 \examples{
-dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', username='admin', password='admin', port='2480')
+dbInfo(host='127.0.0.1',
+     database='GratefulDeadConcerts',
+     username='admin', password='admin', port='2480')
 }
 \author{
 Jared P. Lander

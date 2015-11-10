@@ -4,14 +4,12 @@
 \alias{buildDBURL}
 \title{buildDBURL}
 \usage{
-buildDBURL(db, type = "query", limit = -1)
+buildDBURL(db, type = "query")
 }
 \arguments{
 \item{db}{An \code{OrientDB} object}
 
 \item{type}{Type of command to execute}
-
-\item{limit}{The limit for the number of records; defualt is -1 for all records}
 }
 \value{
 A full URL for the OrientDB curl API
@@ -23,7 +21,8 @@ Builds URL for OrientDB API
 Builds URL for OrientDB API
 }
 \examples{
-db <- dbInfo(host='127.0.0.1', database='GratefulDead', username='admin', password='admin', port='2480')
+db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts',
+             username='admin', password='admin', port='2480')
 buildDBURL(db)
 buildDBURL(db, 'sql')
 }

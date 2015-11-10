@@ -19,8 +19,9 @@ Builds URL for OrientDB API
 Builds URL for OrientDB API
 }
 \examples{
-db <- dbInfo(host='127.0.0.1', database='GratefulDead', username='admin', password='admin', port='2480')
-buildDBUrlGeneric(db)
+db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts',
+             username='admin', password='admin', port='2480')
+orientexpress:::buildDBUrlGeneric(db)
 }
 \author{
 Jared P. Lander
