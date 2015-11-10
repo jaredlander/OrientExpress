@@ -21,8 +21,10 @@ Print method for OrientDB connection string
 S3 method for printing conenction string info
 }
 \examples{
-dbInfo(host='127.0.0.1', database='GratefulDead', username='admin', password='admin', port='2480')
-print(dbInfo(host='127.0.0.1', database='GratefulDead', username='admin', password='admin', port='2480'))
+dbInfo(host='127.0.0.1', database='GratefulDeadConcerts',
+         username='admin', password='admin', port='2480')
+print(dbInfo(host='127.0.0.1', database='GratefulDeadConcerts',
+             username='admin', password='admin', port='2480'))
 }
 \author{
 Jared P. Lander
