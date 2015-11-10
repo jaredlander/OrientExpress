@@ -8,7 +8,7 @@ port <- '2480'
 dbLine <- dbInfo(host=host, database=database, username=username, password=password, port=port)
 selectStatement <- 'Select * from V'
 
-query1 <- buildQuery(db=dbLine, query=selectStatement
+query1 <- buildQuery(db=dbLine, query=selectStatement)
 query2 <- buildQuery(db=dbLine, query=selectStatement, limit=20)
 query3 <- buildQuery(db=dbLine, query=selectStatement, limit=-1)
 
@@ -28,7 +28,7 @@ test_that('buildQuery results in a string of length one', {
 
 test_that('buildQuery errors out if not provided a proper db', {
     expect_error(buildQuery(3, 'SELECT * FROM V'))
-}
+})
 
 test_that('buildQuery builds the proper string', {
     #str_detect(query1, 'http://.*?:.*?@\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}:\\d{1,4}/query/')
