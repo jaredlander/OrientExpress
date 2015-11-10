@@ -1,6 +1,6 @@
 context("insert behaves")
 
-st <- '127.0.0.1'
+host <- '127.0.0.1'
 database <- 'GratefulDeadConcerts'
 username <- 'admin'
 password <- 'admin'
@@ -22,4 +22,4 @@ test_that('insert errors out without the appropriate database object and list', 
     expect_error(insert(dbLine, badObject1))
     #expect_error(insert(dbLine, badObject2))
     expect_error(insert(dbLine, badObject3))
-}
+})

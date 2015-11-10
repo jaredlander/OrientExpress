@@ -74,7 +74,7 @@ print.OrientDB <- function(x, ...)
 #' @examples 
 #' db <- dbInfo(host='127.0.0.1', database='GratefulDeadConcerts', 
 #'              username='admin', password='admin', port='2480')
-#' orientexpress:::buildDBUrlGeneric(db)
+#' buildDBUrlGeneric(db)
 #' 
 buildDBUrlGeneric <- function(db)
 {
