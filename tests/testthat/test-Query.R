@@ -8,7 +8,7 @@ port <- '2480'
 dbLine <- dbInfo(host=host, database=database, username=username, password=password, port=port)
 selectStatement <- 'Select * from V'
 
-query1 <- buildQuery(db=dbLine, query=selectStatement
+query1 <- buildQuery(db=dbLine, query=selectStatement)
 query2 <- buildQuery(db=dbLine, query=selectStatement, limit=20)
 query3 <- buildQuery(db=dbLine, query=selectStatement, limit=-1)
 
