@@ -32,7 +32,7 @@ test_that('buildDBUrlGeneric and buildURL error out if not provided a proper DB 
 })
 
 test_that('The DB URL Generic is built properly', {
-    expect_equal(buildDBUrlGeneric(dbLine), sprintf('http://%s:%s@%s:%s/%%s/%s/%%s', username, password, host, port, database))
+    expect_equal(buildDBUrlGeneric(dbLine), sprintf('http://%s:%s@%s:%s/%%s/%s', username, password, host, port, database))
 })
 
 test_that('The DB URL is built properly', {
