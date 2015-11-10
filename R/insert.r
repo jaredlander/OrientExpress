@@ -29,6 +29,7 @@ insert <- function(db, object, type=c('document', 'graph'))
     
     # make sure it's a named list
     assertthat::assert_that(!is.null(names(object)))
+    assertthat::assert_that(length(names(object)) == length(object))
     
     # build the URL for the POST command
     theURL <- buildDBURL(db, type='document')
